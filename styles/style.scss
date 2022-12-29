@@ -1,0 +1,120 @@
+@import "reset";
+
+//---Variables---
+
+$cOrange: hsl(25, 97%, 53%);
+$cLGrey: hsl(217, 12%, 63%);
+$cMGrey: hsl(221, 12%, 30%);
+$cDBlue: hsl(213, 19%, 18%);
+$cVDBlue: hsl(216, 12%, 8%);
+$font: "Overpass", sans-serif;
+$fontRegular: 400;
+$fontBold: 700;
+
+body {
+  background-color: $cVDBlue;
+  font-size: 0.875rem;
+  font-family: $font;
+  font-weight: $fontRegular;
+  color: $cLGrey;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+}
+
+main {
+  max-width: 40ch;
+  background-color: $cDBlue;
+  border-radius: 2rem;
+  overflow: hidden;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+div.box-star {
+  position: relative;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $cMGrey;
+  display: grid;
+  place-content: center;
+  border-radius: 5rem;
+}
+
+h1 {
+  color: white;
+  opacity: 0.8;
+  padding-bottom: 0.4rem;
+}
+
+p {
+  opacity: 0.9;
+}
+
+div.rating {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+//---Buttons---
+
+button.rate {
+  background-color: $cMGrey;
+  border-color: transparent;
+  border-radius: 5rem;
+  color: $cLGrey;
+  opacity: 0.9;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding-top: 0.2rem;
+}
+
+.rate:hover {
+  background-color: hsl(217, 12%, 63%);
+  color: white;
+}
+
+.rate:focus {
+  background-color: $cOrange;
+  color: white;
+}
+
+button.submit {
+  background-color: $cOrange;
+  color: white;
+  border-color: transparent;
+  border-radius: 5rem;
+  height: 2.5rem;
+  padding-top: 0.25rem;
+}
+
+.submit:hover {
+  background-color: white;
+  color: $cOrange;
+}
+
+//---Rated page---
+
+main.rated {
+  display: none;
+  text-align: center;
+}
+
+img.thanks {
+  padding: 2rem;
+  padding-left: 4.2rem;
+}
+
+div.selected {
+  color: $cOrange;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  width: 11rem;
+  height: 1.75rem;
+  padding-top: 0.3rem;
+  background-color: $cMGrey;
+  border-radius: 5rem;
+}
